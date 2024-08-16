@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    width: 100%;
+    background: url("../images/background.jpg");
+}
+
+#header_div {
+    background-image: url('../images/Back_Header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.p-header-1 {
+    text-align: right;
+    color: firebrick;
+    font-size: 48px;
+    font-weight: 900;
+    text-shadow: darksalmon 1px 2px;
+    padding-top: 10px;
+    padding-bottom: 2%;
+    padding-right: 18%;
+    margin-top: 8px;
+}
+
+.p-header-2 {
+    text-align: right;
+    color: brown;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: darksalmon 1px 2px;
+    margin-top: -5%;
+    padding-bottom: 10%;
+    padding-right: 18%;
+}
+
+#my_logo {
+    max-width: 6%;
+    height: auto;
+    margin: 20px 0 0 20px;
+    padding: 0;
+    border: 0;
+    position: absolute;
+}
+
+.tabs {
+    position: relative;
+    min-height: 750px;
+    clear: both;
+    margin: 25px 0;
+}
+
+.tab {
+    float: left;
+}
+
+.tab label {
+    background: rgb(145, 185, 196);
+    padding: 10px;
+    border: 1px solid rgb(2, 13, 59);
+    margin-left: -1px;
+    cursor: pointer;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    z-index: 1;
+}
+
+[class^="grid-container"] { /*.grid-container*/
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+    grid-gap: 5%;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    justify-content: stretch;
+}
+
+[class^="grid-container"] > div {
+    text-align: center;
+    font-size: 30px;
+}
+
+.video-d {
+    height: 280px;
+    width: 100%;
+    max-width: 450px;
+    border-width: 4px;
+    border-radius: 10%;
+    border-color: black;
+}
+
+iframe video {
+    object-fit: scale-down;
+}
+
+.tab [type=radio] {
+    display: none;
+}
+
+[type=radio]:checked + label {
+    background: rgb(75, 44, 185);
+    border-bottom: 1px solid rgb(2, 13, 59);
+    z-index: 1;
+}
+
+[type=radio]:checked + label + .content {
+    display: flex;
+    z-index: 2;
+}
+
+footer {
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .tab {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tab label {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+        position: inherit;
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        top: 18%;
+        left: 0%;
+        z-index: 1;
+    }
+    
+    [class^="grid-container"] {
+        display: block;
+        justify-content: flex-start;
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    .video-d {
+        width: 60%;
+        height: auto;
+    }
+}

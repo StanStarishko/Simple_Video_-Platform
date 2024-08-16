@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+    width: 100%;
+    background: url("../images/background.jpg");
+}
+
+#header_div {
+    background-image: url('../images/Back_Header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.p-header-1 {
+    text-align: right;
+    color: firebrick;
+    font-size: 48px;
+    font-weight: 900;
+    text-shadow: darksalmon 1px 2px;
+    padding-top: 10px;
+    padding-bottom: 2%;
+    padding-right: 18%;
+    margin-top: 8px;
+}
+
+.p-header-2 {
+    text-align: right;
+    color: brown;
+    font-size: 32px;
+    font-weight: 900;
+    text-shadow: darksalmon 1px 2px;
+    margin-top: -5%;
+    padding-bottom: 10%;
+    padding-right: 18%;
+}
+
+#my_logo {
+    max-width: 6%;
+    height: auto;
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 0px;
+    border: 0;
+    position: absolute;
+}
+
+.tabs {
+    position: relative;
+    min-height: 750px;
+    clear: both;
+    margin: 25px 0;
+    margin-bottom: -10px;
+}
+
+.tab {
+    float: left;
+}
+
+.tab label {
+    background: rgb(145, 185, 196);
+    padding: 10px;
+    border: 1px solid rgb(2, 13, 59);
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    cursor: pointer;
+}
+
+.tab [type=radio] {
+    display: none;
+    /*display: block;*/
+}
+
+.content {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    /*background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    /*right: 0;
+    bottom: 0;*/
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
+}
+
+[type=radio]:checked~label {
+    background: rgb(75, 44, 185);
+    border-bottom: 1px solid rgb(2, 13, 59);
+    z-index: 2;
+}
+
+[type=radio]:checked~label~.content {
+    z-index: 1;
+}
+
+[class^="grid-container"] {
+    display: grid;
+    grid-template-columns: 450px 450px;
+    grid-template-rows: 280px 280px;
+    grid-gap: 5%;
+    padding: 5%;
+    justify-content: stretch;
+}
+
+[class^="grid-container"]>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+}
+
+.video-d {
+    height: 280px;
+    width: 450px;
+    border-width: 4px;
+    border-radius: 10%;
+    border-color: black;
+    background-color: antiquewhite;
+}
+
+iframe video {
+    object-fit: scale-down;
+}
+
+@media only screen and (max-width: 1000px) {
+    [class^="grid-container"] {
+        display: block;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    /*.content {
+        top: 64px;
+    }*/
+    .video-d {
+        width: auto;
+        height: auto;
+    }
+    .tab label {
+        position: inherit;
+    }
+}
